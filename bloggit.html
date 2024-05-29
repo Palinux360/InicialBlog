@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Git</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Guía de Comandos Git</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Configuración Inicial y Crear repositorio local</h2>
+            <div class="command">
+                <h3>git init</h3>
+                <p>Inicializa un nuevo repositorio de Git en el directorio actual.</p>
+            </div>
+            <div class="command">
+                <h3>git config</h3>
+                <p>Muestra o cambia la configuración de Git.</p>
+            </div>
+            <div class="command">
+                <h3>git config --list</h3>
+                <p>Muestra todas las configuraciones actuales de Git.</p>
+            </div>
+            <div class="command">
+                <h3>git config --global user.name “Nombre Apellido”</h3>
+            </div>
+            <div class="command">
+                <h3>git config --global user.email “tu@email.com”</h3>
+            </div>
+        </section>
+        <section>
+            <h2>Comandos Git</h2>
+            <div class="command">
+                <h3>git log</h3>
+                <p>Muestra los cambios que han ocurrido en el repositorio.</p>
+            </div>
+            <div class="command">
+                <h3>git reset</h3>
+                <p>Permite volver a una versión anterior.</p>
+                <ul>
+                    <li>git reset &lt;commit&gt;: Resetea al commit especificado.</li>
+                    <li>git reset --hard: Vuelve al estado anterior.</li>
+                    <li>git reset --soft: Vuelve a la versión anterior mantiene en staging.</li>
+                </ul>
+            </div>
+            <div class="command">
+                <h3>git status</h3>
+                <p>Estado actual del repositorio.</p>
+            </div>
+            <div class="command">
+                <h3>git add .</h3>
+                <p>Agrega al staging todos los archivos que están en la carpeta.</p>
+            </div>
+            <div class="command">
+                <h3>git commit -m "mensaje"</h3>
+                <p>Guarda los cambios en el repositorio.</p>
+            </div>
+            <div class="command">
+                <h3>git commit -am</h3>
+                <p>Realiza un commit de todos los cambios en los archivos rastreados. No incluye nuevos archivos no rastreados con git add.</p>
+            </div>
+            <div class="command">
+                <h3>git show</h3>
+                <p>Muestra detalles del commit apuntado por el HEAD.</p>
+            </div>
+            <div class="command">
+                <h3>git diff</h3>
+                <p>Compara versiones, muestra los cambios de la versión en staging vs actual en PC.</p>
+            </div>
+            <div class="command">
+                <h3>git log --stat</h3>
+                <p>Muestra los cambios específicos y en cuáles archivos.</p>
+            </div>
+            <div class="command">
+                <h3>git checkout</h3>
+                <p>Permite ver cómo era el archivo "antes".</p>
+                <ul>
+                    <li>git checkout &lt;commit&gt;: Cambia al commit especificado.</li>
+                    <li>git checkout master nombre.ext: Cambia a la última versión de nombre.</li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>Ramas (Branches de Git)</h2>
+            <div class="command">
+                <h3>git branch</h3>
+                <p>Muestra las ramas actuales y destaca la rama actual.</p>
+            </div>
+            <div class="command">
+                <h3>git branch Name</h3>
+                <p>Crea una nueva rama con el nombre “Name”.</p>
+            </div>
+            <div class="command">
+                <h3>git checkout nombre_rama</h3>
+                <p>Cambia a la rama nombre_rama.</p>
+            </div>
+            <div class="command">
+                <h3>git checkout master</h3>
+                <p>Cambia a la rama master.</p>
+            </div>
+        </section>
+        <section>
+            <h2>Fusión de Ramas (Merge)</h2>
+            <div class="command">
+                <h3>git merge</h3>
+                <p>Un merge integra cambios de una rama en otra. El merge se realiza en la rama "destino". Ejemplo: si tienes una rama feature y quieres integrar esos cambios en master, primero debes ir a master (git checkout master) y luego realizar el merge (git merge feature).</p>
+            </div>
+        </section>
+        <section>
+            <h2>Comandos Git en Repositorios Remotos</h2>
+            <div class="command">
+                <h3>git clone &lt;url&gt;</h3>
+                <p>Trae los archivos del repositorio remoto al directorio de trabajo (copia el master).</p>
+            </div>
+            <div class="command">
+                <h3>git push</h3>
+                <p>Envía el cambio desde el repositorio local al remoto.</p>
+            </div>
+            <div class="command">
+                <h3>git fetch</h3>
+                <p>Trae los cambios del repositorio remoto al repositorio local; no actualiza los archivos de trabajo.</p>
+            </div>
+            <div class="command">
+                <h3>git merge</h3>
+                <p>Fusiona la rama especificada con la rama actual.</p>
+            </div>
+            <div class="command">
+                <h3>git pull</h3>
+                <p>Combina git fetch y git merge. Primero, copia los cambios del repositorio remoto al local y luego fusiona esos cambios en la rama actual.</p>
+                <p>...</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Guía de Comandos Git</p>
+    </footer>
+</body>
+</html>
